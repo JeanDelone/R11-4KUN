@@ -4,10 +4,11 @@ public class Card {
 
     private String[] colors = {"RED", "BLUE", "BLACK", "YELLOW"};
 
-    private boolean isJoker;
-    private boolean isFirst;
-    private String color;
-    private int number;
+    protected boolean isJoker;
+    protected boolean isFirst;
+    protected String color;
+    protected int number;
+    protected boolean fromHand;
 
     Card(String color, int number, boolean isFirst,boolean isJoker){
         this.color = color;
