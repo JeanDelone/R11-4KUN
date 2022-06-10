@@ -40,7 +40,7 @@ public class Board {
                         return false;
                     }
                 }
-            return true;
+
         }
         else{
             if (group.length > 4){
@@ -61,11 +61,32 @@ public class Board {
                 }
             }
 
+        }
+        return true;
+    }
 
-                    }
-        return false;
-
+    boolean canCardBeAdded(Card[] group, Card card){
+        if (group.length == 0){
+            return true;
+        }
+        if (!(card.color.equals(group[0].color))){
+            for (Card karta : group){
+                if(karta.color.equals(card.color) || karta.number != card.number){
+                    return false;
                 }
+            }
+            return true;
+        }
+//        else{
+//            for (Card karta : group){
+//                if(karta.color.equals((card.color))){
+//                    return false;
+//                }
+//            }
+//            group.sort
+//        }
+        return false;
+    }
 
 
     private void calculatePossibleBoards(){
